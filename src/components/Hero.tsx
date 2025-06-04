@@ -1,9 +1,19 @@
-import React from 'react';
-import { motion } from 'framer-motion'; // For animations
+import React from "react";
+import { motion } from "framer-motion"; // For animations
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="py-20 md:py-32 text-center bg-gradient-to-r from-gray-700 via-gray-800 to-black text-white">
+    <section
+      id="home"
+      className="py-20 md:py-32 text-center relative text-white"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(30,30,30,0.7),rgba(30,30,30,0.7)), url('/images.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="container mx-auto px-4">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
@@ -19,7 +29,8 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
           className="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-gray-300"
         >
-          Discover our exclusive range of car care & detailing products, engineered for perfection and shine that lasts.
+          Discover our exclusive range of car care & detailing products,
+          engineered for perfection and shine that lasts.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}

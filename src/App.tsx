@@ -13,7 +13,12 @@ function App() {
       {/* It's possible BackgroundLines might be better inside the main tag if Header/Footer are outside its effect */}
       {/* Or, each section component could optionally include its own BackgroundLines if needed for specific effects */}
       {/* For now, keep it as a global background */}
-      <BackgroundLines svgOptions={{ duration: 10 }} className="absolute inset-0 -z-10 w-full h-full" />
+      <BackgroundLines
+        svgOptions={{ duration: 10 }}
+        className="absolute inset-0 -z-10 w-full h-full"
+      >
+        <></>
+      </BackgroundLines>
 
       <Header />
 
